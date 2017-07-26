@@ -1,0 +1,19 @@
+Source: vpn-for-web
+Section: web
+Priority: optional
+Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
+Build-Depends: debhelper (>= 9), dh-exec, phpab, pkg-php-tools
+Standards-Version: 3.9.8
+Homepage: https://github.com/eduvpn/vpn-for-web
+Vcs-Git: git://github.com/eduvpn-debian/vpn-for-web.git
+Vcs-Browser: https://github.com/eduvpn-debian/vpn-for-web/
+
+Package: vpn-for-web
+Architecture: any
+# TODO: generates invalid package name php-paragonie-constant_time_encoding
+# TODO2: generates php-paragonie-constant-time-encoding < 2, we packages 2.0.3
+#Depends: ${misc:Depends}, ${phpcomposer:Debian-require}
+Depends: ${misc:Depends}, php-common, php-imagick, php-json, php-libsodium, php-mbstring, php-fkooman-oauth2-client, php-fkooman-secookie, php-paragonie-constant-time-encoding, php-common, php-twig (>= 1.0), php-twig (<< 2~~)
+Suggests: ${phpcomposer:Debian-suggest}
+Description: ${phpcomposer:description}
+

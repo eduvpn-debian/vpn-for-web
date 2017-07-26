@@ -1,0 +1,9 @@
+#!/usr/bin/dh-exec --with=install
+
+debian/apache.conf => /etc/apache2/conf-available/vpn-for-web.conf
+bin/fetch-provider-info.php => /usr/bin/vpn-for-web-fetch-provider-info
+config/config.php.example => /etc/vpn-for-web/config.php
+src/* /usr/share/vpn-for-web/src/SURFnet/VPN/Web/
+views /usr/share/vpn-for-web/
+web /usr/share/vpn-for-web/
+tmp/vendor /usr/share/vpn-for-web/

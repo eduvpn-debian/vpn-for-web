@@ -1,0 +1,22 @@
+#!/usr/bin/make -f
+
+define REQUIRES
+require_once '/usr/share/php/Twig/autoload.php';
+require_once '/usr/share/php/Twig/Extensions/autoload.php';
+require_once '/usr/share/php/fkooman/OAuth/Client/autoload.php';
+require_once '/usr/share/php/fkooman/SeCookie/autoload.php';
+endef
+
+# easier to use this as a shell variable
+export REQUIRES
+
+override_dh_auto_build:
+	mkdir -p tmp/src/SURFnet/VPN/Web
+	mkdir tmp/vendor
+	cp -r src/* tmp/src/SURFnet/VPN/Web/.
+	phpab -o tmp/vendor/autoload.php tmp/src
+	echo "$${REQUIRES}" >> tmp/vendor/autoload.php
+
+%:
+	dh $@ --with phpcomposer
+

@@ -1,0 +1,2 @@
+etc/vpn-for-web usr/share/vpn-for-web/config
+var/lib/vpn-for-web usr/share/vpn-for-web/data
