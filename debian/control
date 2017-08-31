@@ -9,7 +9,7 @@ Vcs-Git: git://github.com/eduvpn-debian/vpn-for-web.git
 Vcs-Browser: https://github.com/eduvpn-debian/vpn-for-web/
 
 Package: vpn-for-web
-Architecture: any
+Architecture: all
 # TODO: generates invalid package name php-paragonie-constant_time_encoding
 # TODO2: generates php-paragonie-constant-time-encoding < 2, we packages 2.0.3
 #Depends: ${misc:Depends}, ${phpcomposer:Debian-require}

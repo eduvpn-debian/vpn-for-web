@@ -1,3 +1,9 @@
+vpn-for-web (0.1-2) stable; urgency=medium
+
+  * fix arch
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Thu, 31 Aug 2017 12:14:11 +0200
+
 vpn-for-web (0.1-1) stable; urgency=medium
 
   * initial release
