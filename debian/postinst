@@ -1,7 +1,29 @@
 #!/bin/sh
+# postinst script for vpn-for-web
+#
+# see: dh_installdeb(1)
 
-#DEBHELPER
+set -e
 
-chown www-data:www-data /var/lib/vpn-for-web
-chmod 700 /var/lib/vpn-for-web
+if [ -f /usr/share/debconf/confmodule ]; then
+        . /usr/share/debconf/confmodule
+fi
+
+case "$1" in
+    configure)
+	chown www-data:www-data /var/lib/vpn-for-web
+	chmod 700 /var/lib/vpn-for-web
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
 

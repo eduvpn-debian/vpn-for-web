@@ -1,5 +1,5 @@
 Source: vpn-for-web
-Section: web
+Section: php
 Priority: optional
 Maintainer: Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>
 Build-Depends: debhelper (>= 9), dh-exec, phpab, pkg-php-tools
@@ -13,7 +13,8 @@ Architecture: all
 # TODO: generates invalid package name php-paragonie-constant_time_encoding
 # TODO2: generates php-paragonie-constant-time-encoding < 2, we packages 2.0.3
 #Depends: ${misc:Depends}, ${phpcomposer:Debian-require}
-Depends: ${misc:Depends}, php-common, php-imagick, php-json, php-libsodium, php-mbstring, php-fkooman-oauth2-client, php-fkooman-secookie, php-paragonie-constant-time-encoding, php-common, php-twig (>= 1.0), php-twig (<< 2~~)
+Depends: ${misc:Depends}, php-common, php-imagick, php-json, php-libsodium, php-mbstring, php-fkooman-oauth2-client, php-fkooman-secookie, php-paragonie-constant-time-encoding, php-common, php-twig (>= 1.0), php-twig (<< 2~~), php-cli
 Suggests: ${phpcomposer:Debian-suggest}
-Description: ${phpcomposer:description}
-
+Description: Download VPN configurations by web
+ This application allow users to download VPN configurations using the API
+ provided by VPN services.

@@ -1,3 +1,9 @@
+vpn-for-web (0.1-3) stable; urgency=medium
+
+  * fix lintian errors and warnings
+
+ -- Gijs Molenaar (launchpad ppa build key) <gijs@pythonic.nl>  Fri, 13 Oct 2017 17:44:23 +0200
+
 vpn-for-web (0.1-2) stable; urgency=medium
 
   * fix arch
